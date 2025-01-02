@@ -11,10 +11,10 @@ body {
 }
 
 /*Navigation Bar */
-header {
+#home {
     width: 100%;
     height: 100vh;
-    background-image: url(/comp1234/assignments/assignment02/assets/img/photo-header.jpg);
+    background-image: url(../img/photo-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -24,7 +24,7 @@ nav {
     position: fixed;
     width: 100%;
     margin: 0 auto;
-    background-color: rgba(12, 12, 12, 0.50);
+    background-color: rgba(12, 12, 12, 0.70);
     z-index: 2;
 }
 nav>ul {
@@ -48,7 +48,7 @@ nav>ul>li>a {
     font-weight: bold;
 }
 nav>ul>li>a:hover {
-    color: #fff;
+    color: #ffffff;
 }
 #logo {
     float: left;
@@ -58,9 +58,9 @@ nav>ul>li>a:hover {
 }
 
 /*Page title*/
-#container {
+header>section {
     margin: auto;
-    width: 50%;
+    width: 60%;
     padding: 20px;
     text-align: center;
     color: #e9972d;
@@ -82,14 +82,14 @@ h2 {
 }
 
 /*Sections Standard*/
-section {
+.mainSections {
     min-height: 100vh;
     margin: 0 auto;
 }
 h3 {
     margin: 0 auto 30px;
     width: fit-content;
-    padding: 50px 0 10px;
+    padding: 2em 0 0.5em;
     text-align: center;
     font-family:"Roboto", sans-serif;
     font-size: 48px;
@@ -109,41 +109,41 @@ h3 {
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.20);
     background: rgba(95,28,47,1);
     border-radius: 10px;
-    width: 40%;
-}
-#eventInfo1>h4, h5 {
+    width: 50%;
     color: #ffffff;
-}
-#eventInfo1>h5 {
-    font-size: 25px;
 }
 #eventInfo1>p {
-    font-size: 24px;
+    font-size: 25px;
     color: #ffffff;
+    padding: 10px;
+}
+#eventInfo1>address {
+    padding: 10px;
+    font-size: 25px;
 }
 #eventInfo2 {
     width: 60%;
     text-align: justify;
-    line-height: 2em;
+    line-height: 2.5em;
 }
 #eventInfo2>h4 {
     color: #143829;
     margin-top: 50px;
+}
+#eventInfo2>p {
+    font-size: 18px;
+    padding: 10px;
+    color: #143829;
 }
 .eventInfo>h4, h5 {
     font-size: 30px;
     margin-bottom: 20px;
     padding: 10px;
 }
-.eventInfo>p {
-    font-size: 18px;
-    padding: 10px;
-    color: #143829;
-}
-.eventInfo>address>p {
+.eventInfo>address {
     padding-left: 10px;
 }
-.eventInfo>address>p a {
+.eventInfo>address a {
     text-decoration: none;
     color: #143829;
     font-weight: bold;
@@ -151,25 +151,23 @@ h3 {
 
 /* Event Guest - Section*/
 #guests {
-    padding-bottom: 45em;
     background-color: #143829;
 }
 #guestsTitle>h3 {
     color: #cdd4c4;
 }
 #guestContainer {
+    overflow: hidden;
     width: 80%;
-    margin: 20px auto;
-    float: left;
-    position: relative;
-    left: 10%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    box-sizing: border-box;
 }
 .guestBox {
     float: left;
-    width: 30%;
+    width: 31.5%;
     margin: 10px;
-    text-align: center;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.20);
     transition: transform 0.3s ease;
     border-radius: 10px;
 }
@@ -178,28 +176,20 @@ h3 {
 }
 .guestBox>img {
     width: 100%;
-    height: 30%;
     border-radius: 10px 10px 0 0;
 }
 .guestBox>p {
     color: #cdd4c4;
     font-size: 18px;
-    margin: 40px auto 10px;
-    padding: 10px 10px;
+    margin: auto 10px;
+    padding: 5px 10px;
     text-align: justify;
-    width: fit-content;
     line-height: 1.5em;
     font-weight: 300;
 }
-.guestBox>figcaption {
-    color: #cdd4c4;
-    width: fit-content;
-    font-size: 20px;
-    padding: 5px 10px;
+.guestBox>p:nth-child(2) {
     font-weight: bold;
-    position: absolute;
-    bottom: 12em;
-    margin: 10px;
+    font-size: 20px;
 }
 
 /*Gallery - Section */
@@ -235,7 +225,7 @@ h3 {
      z-index: 1;
     filter: grayscale(0) drop-shadow(0 0 4px rgba(0, 0, 0, 0.5));
  }
-.galleryPhoto>img {
+.galleryPhoto>a>img {
     width: 100%;
     margin: 10px;
     border-radius: 5px;
@@ -274,7 +264,7 @@ h3 {
     width: 50%;
     margin: 10px auto 50px;
     padding: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
     background-color: #cdd4c4;
 }
@@ -288,6 +278,10 @@ h3 {
 }
 .scheduleBox>ul>li>time {
     font-weight: bold;
+}
+.scheduleBox>ul>li:hover {
+    font-weight: bold;
+    color: #143829;
 }
 .scheduleBox>h4 {
     margin: 20px;
@@ -308,27 +302,32 @@ h3 {
     color: #143829;
 }
 .testimonialsContainer {
-    width: 80%;
+    width: fit-content;
     margin: 0 auto;
+    border: 5px solid #cdd4c4;
+    overflow: hidden;
 }
 .testimonialBox {
     float: left;
-    width: 32%;
-    height: 200px;
-    margin: 100px 5px 0;
+    width: 20em;
+    height: 15em;
+    margin: 5em 1em;
     text-align: justify;
     background-color: #143829;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
     color: #cdd4c4;
 }
 .testimonialBox>p {
-    padding: 20px 30px;
+    padding: 30px 30px 10px;
     font-size: 18px;
+    line-height: 1.5em;
+
 }
 .testimonialBox>p:nth-child(2n) {
     text-align: right;
     font-size: 18px;
+    padding: 0 30px;
     font-style: italic;
 }
 
@@ -344,6 +343,7 @@ h3 {
     width: 80%;
     margin: 50px auto;
     color: #143829;
+    overflow: hidden;
 }
 .locationBox>p {
     font-size: 20px;
@@ -360,8 +360,11 @@ h3 {
     left: 10%;
 }
 .locationBox>address {
+    margin-right: 5em;
     padding: 20px 50px;
     text-align: right;
+    width: 80%;
+    float: right;
 }
 
 /*Footer*/
@@ -375,4 +378,38 @@ footer>p {
     margin: 0 auto;
     text-align: center;
     padding: 20px;
+}
+
+/* Reflection Page - Style */
+#reflectionPage {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    padding-bottom: 5em;
+}
+#reflectionPage>article {
+    padding: 20px 10px 10px;
+    line-height: 2.5em;
+    color: #143829;
+}
+
+#reflectionPage>article>h3 {
+    color: #143829;
+}
+#reflectionPage>article>a {
+    padding: 10px;
+}
+#reflectionPage>article>h4 {
+    font-size: 25px;
+    padding: 10px;
+}
+#reflectionPage>article>p {
+    font-size: 18px;
+    padding: 10px;
+}
+#reflectionPage>article>a, #reflectionPage>article>p>a {
+    color: #143829;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
 }
